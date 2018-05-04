@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.ashik619.mitsogodemo.MainActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/colorPrimary">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:layout_collapseMode="pin"
+            android:layout_height="45dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:gravity="center"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20dp"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardUseCompatPadding="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Device Battery Level"
+                        android:textSize="13dp"
+                        android:checked="false"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/batteryLevel"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13dp"
+                        android:checked="false"
+                        android:text="Device Name and OS version"
+                        android:id="@+id/deviceName"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13dp"
+                        android:checked="false"
+                        android:text="Current Network Type"
+                        android:id="@+id/networkType"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13dp"
+                        android:checked="false"
+                        android:text="Available Device Storage Capacity"
+                        android:id="@+id/storage"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13dp"
+                        android:checked="false"
+                        android:text="Weather Report of Current Location"
+                        android:id="@+id/weatherReport"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textLight"
+                        android:textSize="13dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Interval"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/intervalText"
+                        android:clickable="true"
+                        android:text="Select Interval *"
+                        android:textAllCaps="false"
+                        android:padding="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/textDark"
+                        android:layout_marginTop="3dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/textLight"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:id="@+id/submitButton"
+                        android:background="@drawable/button_bg"
+                        android:text="Submit Scanning"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/resultsListView"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

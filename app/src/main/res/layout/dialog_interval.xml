@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:layout_margin="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="Hour :"
+            android:layout_marginRight="3dp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14.5dp"
+            android:id="@+id/hourText"
+            android:text="0"
+            android:inputType="number"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/text_bg"
+            android:hint="Hour"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="Min :"
+            android:layout_marginRight="3dp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14.5dp"
+            android:inputType="number"
+            android:text="0"
+            android:id="@+id/minText"
+            android:background="@drawable/text_bg"
+            android:hint="Min"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="20dp">
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="37dp"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:id="@+id/cancel"
+            android:background="@drawable/button_bg"/>
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="37dp"
+            android:text="Ok"
+            android:textColor="@color/white"
+            android:id="@+id/ok"
+            android:background="@drawable/button_bg"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
